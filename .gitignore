@@ -1,5 +1,6 @@
 tmp/*
-config/database.php
 app/tmp/*
-app/config/database.php
+Config/database.php
+app/Config/database.php
+thumbs.db
 !empty
