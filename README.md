@@ -15,60 +15,58 @@ AJAX, XML and JSON interfaces will be included as well.
 
 FEATURES
 Patterns
- * Observer
+* Observer
 
 Models
- * Sortable if they have an "order" column
- *
+* Sortable if they have an "order" column
 
 HTML
- * List
-   * Paginator
-	 * Breadcrumb bar that allows model ancestry (Cities are children of Countries, etc)
-	 * Grouping in tables
-	 * Filter
-	 * Order
- * Add/Edit/Search/All Forms
-	 * Accesskeys
+* List
+  * Paginator
+  * Breadcrumb bar that allows model ancestry (Cities are children of Countries, etc)
+  * Grouping in tables
+  * Filter
+  * Order
+* Add/Edit/Search/All Forms
+  * Accesskeys
 
 API
-	Keyring with ACL permissions in Session
-	Methods
-		list
-		edit
-		add
-		view
-		delete
-		relationships?
-		toggle using bitmasks
-		recycle bin
-		undelete
-Interface
-Flood control and throttling
+* Keyring with ACL permissions in Session
+* Methods
+  * list
+  * edit
+  * add
+  * view
+  * delete
+  * relationships?
+  * toggle using bitmasks
+  * recycle bin
+  * undelete
+* Interface
+* Flood control and throttling
 
 Data Packet
-	entity
-		singularVar
-		pluralVar
-		singularHumanName
-		pluralHumanName
-	data
-	paging
-		first
-		prev
-		next
-		last
+* entity
+  * singularVar
+  * pluralVar
+  * singularHumanName
+  * pluralHumanName
+* data
+* paging
+	* first
+	* prev
+	* next
+	* last
 
 http://mikemayo.org/2012/how-i-learned-to-stop-worrying-and-love-rest
 http://pastie.org/3326375
 
 I18N
-	domains
-		header
-		helptext
+* domains
+	* header
+	* helptext
 
 Bitmask values configured in a central registry
 $bitmasks[modelname][fieldname] = array()
-
 
 notes: To read header link values: $this->request->header('Link');
