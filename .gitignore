@@ -1,6 +1,5 @@
-tmp/*
-app/tmp/*
-Config/database.php
-app/Config/database.php
+/Config/database.php
+/tmp
+.DS_Store
 thumbs.db
 !empty
