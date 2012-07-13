@@ -20,8 +20,10 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-	Router::connect('/', array('controller' => 'users', 'action' => 'index'));
-	Router::connect('/users/', array('controller' => 'users'));
+//	Router::connect('/', array('controller' => 'users', 'action' => 'index'));
+//	Router::connect('/users/', array('controller' => 'users'));
+	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on 
