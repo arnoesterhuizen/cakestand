@@ -1,0 +1,1 @@
+<div class="message notice" id="flashMessage"><span class="ui-icon ui-icon-info"></span><?php echo $message ?></div>

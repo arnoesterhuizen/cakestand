@@ -39,6 +39,7 @@ API
   * view
   * delete
   * relationships?
+  * summary
   * toggle using bitmasks
   * recycle bin
   * undelete

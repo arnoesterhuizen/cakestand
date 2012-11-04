@@ -6,44 +6,23 @@ App::uses('AppController', 'Controller');
  * @property User $User
  */
 class UsersController extends AppController {
-/**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->User->create();
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
-			}
-		}
-	}
-
-/**
- * delete method
- *
- * @throws MethodNotAllowedException
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->User->id = $id;
-		if (!$this->User->exists()) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		if ($this->User->delete()) {
-			$this->Session->setFlash(__('User deleted'));
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('User was not deleted'));
-		$this->redirect(array('action' => 'index'));
-	}
+    /**
+     * @param array $_actions a list of actions that can be taken on this type of entity
+     * - divided into specific (an entity ID is required) and generic
+     * - and with a bitmask value indicating ACL permissions required
+     *
+     * In the beforeFilter, this parameter is merged with it's parent permissions
+     */
+    protected static $_actions = array(
+        'generic' => array(
+            'index' => 1,
+            'add'   => 1
+        ),
+        'specific' => array(
+            'view'   => 1,
+            'edit'   => 1,
+            'copy'   => 1,
+            'delete' => 1
+        )
+    );
 }

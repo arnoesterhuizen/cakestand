@@ -1,0 +1,1 @@
+<div class="message success" id="flashMessage"><span class="ui-icon ui-icon-circle-check"></span><?php echo $message ?></div>
